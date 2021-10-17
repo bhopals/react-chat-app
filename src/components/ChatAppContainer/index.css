@@ -30,6 +30,24 @@ html, body {
     font-family: var(--app-font-family);
 }
 
+/*** Chat App - ICONS *****/
+.chat-app-icon {
+    width: 50px;
+    height: 40px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.message-icon         { background:  no-repeat url('./../../assets/icons/message.png');         }
+.video-icon           { background:  no-repeat url('./../../assets/icons/video.png');           }
+.call-icon            { background:  no-repeat url('./../../assets/icons/call.png');            }
+.write-message-icon   { background:  no-repeat url('./../../assets/icons/write-message.png');   }
+.microphone-icon      { background:  no-repeat url('./../../assets/icons/microphone.png');      }
+.down-arrow-icon      { background:  no-repeat url('./../../assets/icons/arow-down.png');       }
+.search-icon          { background:  no-repeat url('./../../assets/icons/search.png');          }
+.compose-message-icon { background:  no-repeat url('./../../assets/icons/compose-message.png'); }
+
+
 /*** CHAT APP - Main Container **/
 .chat-app-container {
     width:100%;

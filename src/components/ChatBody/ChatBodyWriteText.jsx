@@ -29,8 +29,8 @@ const ChatBodyWriteText = ({ onDispatchHandler }) => {
           <textarea value={searchText} placeholder='Write a message...' onChange={(e) => setSearchText(e.target.value)} onKeyDown={onKeyDownHandler} />
         </div>
         <div className='chat-body-write-text-buttons'>
-            <div className='body-icon microphone' onClick={() => alert('Sending an audio to participants is not Supported!!')} />
-            <div className='body-icon write-message' onClick={onMessageSendHandler} />
+            <div className='chat-app-icon microphone-icon' onClick={() => alert('Sending an audio to participants is not Supported!!')} />
+            <div className='chat-app-icon write-message-icon' onClick={onMessageSendHandler} />
         </div>
     </div>
   )

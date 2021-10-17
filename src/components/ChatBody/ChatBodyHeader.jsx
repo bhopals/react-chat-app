@@ -12,9 +12,9 @@ const ChatBody = ({ user }) => {
             <div className='chat-body-title'>{user.name}</div>
         </div>
         <div className='chat-body-actions'>
-            <div className='body-icon message' />
-            <div className='body-icon video' />
-            <div className='body-icon call' />
+            <div className='chat-app-icon message-icon' />
+            <div className='chat-app-icon video-icon' />
+            <div className='chat-app-icon call-icon' />
         </div>
     </div>
   )

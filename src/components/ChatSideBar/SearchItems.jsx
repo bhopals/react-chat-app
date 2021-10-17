@@ -15,10 +15,10 @@ const SearchItems = ({ onSearchChange }) => {
   return (
     <div className='chat-side-bar-search'>
       <div className='search-box'>
-        <div className='body-icon search' />
+        <div className='chat-app-icon search-icon search' />
           <input type='text' placeholder='Search...' value={searchText} onChange={onChangeHandler} />
       </div>
-      <div className='body-icon compose-message' />      
+      <div className='chat-app-icon compose-message-icon compose-message' />      
     </div>
   )
 }
