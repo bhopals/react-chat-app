@@ -15,12 +15,14 @@
   --app-background-color: #ffffff;
   --app-main-border-color:  #e8e8e8;
   --app-inside-border-color:  #f5f5f5;
-
-  --user-profile-title-color: #515558;
+  
+  --user-profile-title-color: #b8b9c9;
   --card-item-selected-color: #fafafa;
   --card-item-profile-title-color: #8e88e5;
   --card-item-profile-text-preview-color: #757c86;
   
+  --chat-body-profile-title-color: #515558;
+
   --chat-message-dark-text-color: #ffffff;
   --chat-message-dark-background-color: #8e88e5;
   --chat-message-dark-border-color: #dddcfe;

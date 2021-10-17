@@ -32,7 +32,7 @@
 }
 
 .chat-body-title {
-    color: var(--user-profile-title-color);
+    color: var(--chat-body-profile-title-color);
     font-size: 17px;
     font-weight: 700;
 }

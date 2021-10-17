@@ -1,6 +1,8 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
 
+import DropDownMenu from './../DropDownMenu'
+
 import './index.css'
 
 const ChatHeader = () => {
@@ -19,7 +21,7 @@ const ChatHeader = () => {
               <div className='user-profile'>
                   <div className='user-avatar'><img src={user.profilePhoto} /></div>
                   <div className='user-name'>{user.name}</div>
-                  <div className='down-arrow-icon down-arrow'></div>
+                  <div><DropDownMenu user={user} /></div>
               </div>
           </div>
       </div>

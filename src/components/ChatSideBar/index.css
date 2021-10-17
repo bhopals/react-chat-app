@@ -40,7 +40,7 @@
 }
 
 .card-item .profile .preview {
-    color: var(----card-item-profile-text-preview-color);
+    color: var(--card-item-profile-text-preview-color);
     font-size: 13px;
     white-space: nowrap;
     overflow: hidden;

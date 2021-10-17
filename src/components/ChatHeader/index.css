@@ -53,9 +53,25 @@
     width: 50px;
     height: 40px;
     font-size: 15px;
-    color: var(--user-profile-title-color);
     display: inline-block;
     vertical-align: top;
     font-weight: 700;
 }
 
+.user-profile {
+  font-size: 14px;
+  color: var(--chat-message-light-text-color);
+}
+
+.user-profile li {
+  padding: 5px 10px;
+  line-height: 1.5em;
+}
+
+.messages-count {
+  display: inline-block;
+  border: 1px solid #c6c3c7;
+  border-radius: 50%;
+  width: 27px;
+  text-align: center;
+}
