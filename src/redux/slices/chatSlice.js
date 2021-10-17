@@ -4,7 +4,7 @@ import ChatService from './../../service/ChatService'
 const users = ChatService.getUsers()
 const loggedInUser = ChatService.getLoggedInUser()
 const initialState = { users, selectedUser: users.length > 0 ? users[0] : loggedInUser, loggedInUser }
-
+console.log('ChatService>users>', users)
 const DEFAULT_USER = loggedInUser
 
 const chatSlice = createSlice({
@@ -19,18 +19,18 @@ const chatSlice = createSlice({
 	},
 	addConversation (state, action) {
 		console.log('addConversations>action>', action)
-		let selectedUser = DEFAULT_USER;
+		const { payload } = action
 		const users = state.users.map(user => {
-			if(user => user.id === action.payload.id) {
-				user.messages.push(action.payload.message)
-				selectedUser = user
+			if(user.id === payload.user.id) {
+				user = { ...payload.user, messages: payload.messages };
+				console.log('UPDATE USER>', user)
 			}
+			return user;
 		})
-		console.log('addConversations>selectedUser>', selectedUser)
+		console.log('addConversations>selectedUser>', users)
 		return {
 			...state, 
-			users: [...users],
-			selectedUser
+			users: [...users]
 		}
 	}
   },
