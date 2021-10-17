@@ -22,7 +22,7 @@ const chatSlice = createSlice({
 		const { id, message } = action.payload
 		const users = state.users.map(user => {
 			if(user.id === id) {
-				user = { ...user, messages: [...user.messages, { text: message, isReceived: false }] };
+				user = { ...user, messages: [...user.messages, { text: message, isOwnSentMessage: false }] };
 				selectedUser = user
 			}
 			return user;
