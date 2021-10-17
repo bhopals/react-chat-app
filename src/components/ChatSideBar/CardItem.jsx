@@ -10,9 +10,9 @@ const CardItem = ({ user, onClickHandler }) => {
   const { messages = [] } = users.find(({ id }) => id === user.id) || selectedUser
 
   return (
-    <div className={`card-item ${ selectedUser.id === user.id ? SELECTED : EMPTY }`} onClick={() => onClickHandler(user)} key={user.id}>
+    <div data-testid='card-item-click' className={`card-item ${ selectedUser.id === user.id ? SELECTED : EMPTY }`} onClick={() => onClickHandler(user)} key={user.id}>
         <div className='avatar'>
-            <img src={user.profilePhoto} /> 
+            <img src={user.profilePhoto} alt={`${user.name} Avatar`}/> 
         </div>
         <div className='profile'>
             <div className='name'>{user.name}</div>
