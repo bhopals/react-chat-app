@@ -56,7 +56,10 @@ const generateUser = () => {
     };
 }
 
-export default {
+const ChatService = {
   getUsers,
   getLoggedInUser
 }
+
+export default ChatService
+

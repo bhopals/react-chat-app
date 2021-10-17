@@ -4,7 +4,6 @@ import ChatService from './../../service/ChatService'
 const users = ChatService.getUsers()
 const loggedInUser = ChatService.getLoggedInUser()
 const initialState = { users, selectedUser: users.length > 0 ? users[0] : loggedInUser, loggedInUser }
-console.log('ChatService>users>', users)
 const DEFAULT_USER = loggedInUser
 
 const chatSlice = createSlice({

@@ -19,7 +19,7 @@ const ChatHeader = () => {
           </div>
           <div className='right'>
               <div className='user-profile'>
-                  <div className='user-avatar'><img src={user.profilePhoto} /></div>
+                  <div className='user-avatar'><img src={user.profilePhoto} alt={user.name} /></div>
                   <div className='user-name'>{user.name}</div>
                   <div><DropDownMenu user={user} /></div>
               </div>
