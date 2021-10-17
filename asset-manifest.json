@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/bhopals/react-chat-app/static/css/main.e070032f.chunk.css",
+    "main.js": "/bhopals/react-chat-app/static/js/main.48547c81.chunk.js",
+    "main.js.map": "/bhopals/react-chat-app/static/js/main.48547c81.chunk.js.map",
+    "runtime-main.js": "/bhopals/react-chat-app/static/js/runtime-main.e661911d.js",
+    "runtime-main.js.map": "/bhopals/react-chat-app/static/js/runtime-main.e661911d.js.map",
+    "static/js/2.b74c74bb.chunk.js": "/bhopals/react-chat-app/static/js/2.b74c74bb.chunk.js",
+    "static/js/2.b74c74bb.chunk.js.map": "/bhopals/react-chat-app/static/js/2.b74c74bb.chunk.js.map",
+    "index.html": "/bhopals/react-chat-app/index.html",
+    "static/css/main.e070032f.chunk.css.map": "/bhopals/react-chat-app/static/css/main.e070032f.chunk.css.map",
+    "static/js/2.b74c74bb.chunk.js.LICENSE.txt": "/bhopals/react-chat-app/static/js/2.b74c74bb.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e661911d.js",
+    "static/js/2.b74c74bb.chunk.js",
+    "static/css/main.e070032f.chunk.css",
+    "static/js/main.48547c81.chunk.js"
+  ]
+}
