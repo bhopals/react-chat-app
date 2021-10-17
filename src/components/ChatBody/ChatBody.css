@@ -17,6 +17,8 @@
 
 .chat-body-text { 
   padding:20px;
+  height: 700px;
+  overflow: scroll;
 }
 
 .chat-body-avatar img {
