@@ -12,9 +12,9 @@ const ChatBody = ({ user }) => {
             <div className='chat-body-title'>{user.name}</div>
         </div>
         <div className='chat-body-actions'>
-            <div data-testid='chat-body-message' className='chat-app-icon message-icon' onClick={() => alert('Type a message to a user and press ENTER or Message Icon to send a message ')}/>
-            <div data-testid='chat-body-video' className='chat-app-icon video-icon' onClick={() => alert('Making a Video Call to a user from the App is not Supported!!')}/>
-            <div data-testid='chat-body-call' className='chat-app-icon call-icon' onClick={() => alert('Making a Phone Call to a user from the App is not Supported!!')}/>
+            <div data-testid='chat-body-message' className='chat-app-icon message-icon' onClick={() => alert('Please Type a message in the Input field provided. Once you have entered the TEXT Message, Kindly press ENTER or CLICK on Message Icon given next to it to SEND your message.')}/>
+            <div data-testid='chat-body-video' className='chat-app-icon video-icon' onClick={() => alert('Video Call feature is not Supported!!')}/>
+            <div data-testid='chat-body-call' className='chat-app-icon call-icon' onClick={() => alert('Phone Call feature is not Supported!!')}/>
         </div>
     </div>
   )
