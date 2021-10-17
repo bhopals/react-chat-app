@@ -70,8 +70,13 @@
 
 .messages-count {
   display: inline-block;
-  border: 1px solid #c6c3c7;
+  border: 1px solid var(--app-main-border-color);
   border-radius: 50%;
-  width: 27px;
+  width: 25px;
   text-align: center;
+  display: inline-block;
+  border-radius: 47%;
+  font-size: 11px;
+  background: var(--card-item-profile-text-preview-color);
+  color: var(--white);
 }

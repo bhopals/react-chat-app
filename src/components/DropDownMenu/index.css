@@ -66,5 +66,5 @@
 }
   
 .drop-down-menu-items li {
-  border-bottom: 1px solid var(--user-name-color);
+  border-bottom: 1px solid var(--app-main-border-color);
 }
