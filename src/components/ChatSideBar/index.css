@@ -1,0 +1,49 @@
+/**** SideBar Panel ***/
+.left-panel {
+    flex: 1;
+    align-items: stretch;
+    border-right: 1px solid var(--app-inside-border-color);
+ }
+
+/*** CARD ITEM CSS***/
+.card-item {
+    display: flex;
+    height: 105px;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 10px 5px 5px 40px;
+}
+
+.card-item.selected {
+    background-color: var(--card-item-selected-color);
+}
+
+.card-item .avatar img {
+    border-radius: 50%;
+    height: 75px;
+}
+
+.card-item .profile {
+    width: 80%;
+    padding: 15px;
+    font-weight: 500;
+}
+
+.card-item .profile .name {
+    color: #8e88e5;
+    font-size: 17px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-item .profile .preview {
+    color: #757c86;
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 4px;
+}

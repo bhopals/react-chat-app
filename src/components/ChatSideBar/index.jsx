@@ -3,6 +3,8 @@ import SearchItems from './SearchItems'
 import CardItems from './CardItems'
 import { useSelector } from 'react-redux';
 
+import './index.css'
+
 const ChatSideBar = () => {
 
   const chatUsers = useSelector(state => state.chat.users);

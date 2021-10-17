@@ -1,11 +1,4 @@
 
-:root {
-  --close-circle-color: #f56058;
-  --minimize-circle-color: #f9bc2e;
-  --maximize-circle-color: #3dc840;
-  --user-name-color: #c6c3c7;
-}
-
 /**** Header Nav - Windows option colors ***/
 .close { background-color: var(--close-circle-color); }
 .minimize { background-color: var(--minimize-circle-color); }
