@@ -1,24 +1,27 @@
-import React, { useState, useEffect }  from 'react'
-import Search from './Search'
+import React, { useState }  from 'react'
+import SearchItems from './SearchItems'
 import CardItems from './CardItems'
 import { useSelector } from 'react-redux';
 
 const ChatSideBar = () => {
 
   const chatUsers = useSelector(state => state.chat.users);
+
   const [users, setUsers] = useState(chatUsers)
 
-  const getMatchedUsers = (name) => chatUsers.filter(user => user.name.toLowerCase().includes(name))
+  const getMatchedUsers = (filteredName) => chatUsers.filter(({ name }) => name.toLowerCase().includes(filteredName))
 
-  const onSearchChangeHandler = (searchString) => { setUsers(getMatchedUsers(searchString.toLowerCase())) }
+  const handleOnSearch = (searchString) => setUsers(getMatchedUsers(searchString.toLowerCase()))
 
   return (
     <div className="chat-side-bar">
-        <Search users={users} onSearchChange={onSearchChangeHandler} />
+        <SearchItems onSearchChange={handleOnSearch} />
         <CardItems users={users} />
     </div>
   )
 }
 
 export default ChatSideBar;
+
+
 

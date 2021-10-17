@@ -14,7 +14,7 @@ const getLoggedInUser = () => {
   return {
     email: 'bhopalsinghsis@gmail.com',
     id: uuidv4(),
-    lastSeen: faker.date.between(faker.date.past(1), new Date()),
+    lastSeen: 'Oct 10, 2021 03:24:00',
     messages: getMessages(USER_COUNT),
     name: 'Bhopal Singh',
     profilePhoto: 'https://avatars.githubusercontent.com/u/17331876?s=400&u=09765a4e69d46ba6b92c81673b3a4e06be110bc6&v=4',
@@ -39,7 +39,7 @@ const getUsers = (count = USER_COUNT) => {
 * @returns an @User Object
 */
 const generateUser = () => {
-    const createdAt = new Date('May 17, 2021 03:24:00')
+    const createdAt = 'May 17, 2021 03:24:00'
     const name = faker.name.findName();
     return {
         coverPhoto: faker.image.image(),
@@ -47,7 +47,7 @@ const generateUser = () => {
         description: faker.lorem.sentences(),
         email: faker.internet.email(name),
         id: uuidv4(),
-        lastSeen: faker.date.between(createdAt, new Date()),
+        lastSeen: 'Oct 15, 2021 03:24:00',
         messages: getMessages(USER_COUNT),
         name: faker.name.findName(),
         profilePhoto: faker.internet.avatar(),

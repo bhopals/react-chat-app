@@ -1,7 +1,9 @@
 
 const CONSTANTS = {
+    CLICK: 'click',
     EMPTY: '',
-    ENTER: 'Enter'
+    ENTER: 'Enter',
+    SELECTED: 'selected'
 }
 
 

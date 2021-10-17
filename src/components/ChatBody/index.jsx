@@ -15,9 +15,7 @@ const ChatBody = () => {
   const { selectedUser } = useSelector(state => state.chat);
   const { messages } = selectedUser
 
-  const handleOnDispatch= (message) => {
-    dispatch(addConversation({ id: selectedUser.id, message}))
-  }
+  const handleOnDispatch= (message) => dispatch(addConversation({ id: selectedUser.id, message}))
   
   return (
     <div className='chat-body'>
@@ -30,4 +28,5 @@ const ChatBody = () => {
 
 
 export default ChatBody;
+
 
