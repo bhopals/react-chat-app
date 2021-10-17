@@ -18,7 +18,7 @@ const SearchItems = ({ onSearchChange }) => {
         <div className='chat-app-icon search-icon search' />
           <input data-testid='search-items' type='text' placeholder='Search...' value={searchText} onChange={onChangeHandler} />
       </div>
-      <div className='chat-app-icon compose-message-icon compose-message' onClick={() => alert('Please Type a message in the Input field provided. Once you have entered the TEXT Message, Kindly press ENTER or CLICK on Message Icon given next to it to SEND your message.')}/>      
+      <div className='chat-app-icon compose-message-icon compose-message' onClick={() => alert('Please type a message in the input field provided. Once you have entered the text message, kindly press ENTER or CLICK on message icon given next to it to send your message.')}/>      
     </div>
   )
 }
