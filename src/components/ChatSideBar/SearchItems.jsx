@@ -18,7 +18,7 @@ const SearchItems = ({ onSearchChange }) => {
         <div className='chat-app-icon search-icon search' />
           <input type='text' placeholder='Search...' value={searchText} onChange={onChangeHandler} />
       </div>
-      <div className='chat-app-icon compose-message-icon compose-message' />      
+      <div className='chat-app-icon compose-message-icon compose-message' onClick={() => alert('Type a message to a user and press ENTER or Message Icon to send a message ')}/>      
     </div>
   )
 }
