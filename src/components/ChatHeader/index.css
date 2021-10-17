@@ -1,5 +1,17 @@
 
+:root {
+  --close-circle-color: #f56058;
+  --minimize-circle-color: #f9bc2e;
+  --maximize-circle-color: #3dc840;
+  --user-name-color: #c6c3c7;
+}
 
+/**** Header Nav - Windows option colors ***/
+.close { background-color: var(--close-circle-color); }
+.minimize { background-color: var(--minimize-circle-color); }
+.maximize { background-color: var(--maximize-circle-color); }
+
+/**** Header Nav - Parent Container ***/
 .chat-header {
  width: 100%;
  height: 100%;
@@ -7,12 +19,12 @@
  justify-content: space-between
 }
 
+/**** Header Nav - LEFT Part - [Windows option circle] ***/
 .left {
-    padding-left: 30px;
     top: 30%;
+    padding-left: 30px;
     position: relative;
 }
-
 
 .left span {
     display: inline-block;
@@ -22,18 +34,7 @@
     margin: 4px;
 }
 
-.close {
-    background-color: #f56058;
-}
-
-.minimize {
-    background-color: #f9bc2e;
-}
-
-.maximize {
-    background-color: #3dc840;
-}
-
+/**** Header Nav - Right Part  [User Profile Avatar] ***/
 .user-avatar img {
     width:40px; 
     height:40px;
@@ -43,8 +44,7 @@
 
 .user-name {
     font-size: 16px;
-    /* color: #c6c3c7; */
-    color: #888888;
+    color: --var(--user-name-color);
     display: inline-block;
     vertical-align: top;
     font-weight: 700;
@@ -57,13 +57,13 @@
 }
 
 .down-arrow-icon {
+    width: 50px;
+    height: 40px;
     font-size: 15px;
     color: #c6c3c7;
     display: inline-block;
     vertical-align: top;
     font-weight: 700;
-    width: 50px;
-    height: 40px;
     background:  no-repeat url('./../../assets/icons/arow-down.png');
 }
 
