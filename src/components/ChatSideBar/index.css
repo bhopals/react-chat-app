@@ -31,7 +31,7 @@
 }
 
 .card-item .profile .name {
-    color: #8e88e5;
+    color: var(--card-item-profile-title-color);
     font-size: 17px;
     font-weight: 700;
     white-space: nowrap;
@@ -40,7 +40,7 @@
 }
 
 .card-item .profile .preview {
-    color: #757c86;
+    color: var(----card-item-profile-text-preview-color);
     font-size: 13px;
     white-space: nowrap;
     overflow: hidden;
@@ -56,4 +56,24 @@
 
 .compose-message {
     width: 60px !important;
+}
+
+.chat-side-bar-search {
+    display: flex;
+    justify-content: space-between;
+}
+
+.chat-side-bar-search .search-box {
+  width: 70%;
+  position: relative;
+  padding-left: 40px;
+}
+
+.chat-side-bar-search .search-box input {
+  border: 0;
+  width: 100%;
+  height: 45px;
+  padding: 5px;
+  font-size: 15px;
+  margin-left: 39px;
 }

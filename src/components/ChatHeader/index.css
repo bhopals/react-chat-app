@@ -37,7 +37,7 @@
 
 .user-name {
     font-size: 16px;
-    color: --var(--user-name-color);
+    color: var(--user-profile-title-color);
     display: inline-block;
     vertical-align: top;
     font-weight: 700;
@@ -53,7 +53,7 @@
     width: 50px;
     height: 40px;
     font-size: 15px;
-    color: #c6c3c7;
+    color: var(--user-profile-title-color);
     display: inline-block;
     vertical-align: top;
     font-weight: 700;

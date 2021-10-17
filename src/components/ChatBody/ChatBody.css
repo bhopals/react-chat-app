@@ -1,0 +1,122 @@
+
+/*** CHAT BODY - MAIN ****/
+.chat-body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*** CHAT BODY - HEADER ****/
+.chat-body-header {
+  display: flex;
+  padding:20px;
+  justify-content: space-between;
+}
+
+.chat-body-text { 
+  padding:20px;
+}
+
+.chat-body-avatar img {
+    border-radius: 50%;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.chat-body-user-profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.chat-body-title {
+    color: var(--user-profile-title-color);
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.chat-body-actions {
+   display: flex;
+}
+
+/*** CHAT BODY - MESSAGE ****/
+.chat-body-message {
+    display: flex;
+    font-size: 14px;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 7px;
+    width: 70%;
+    position: relative;
+    flex-direction: column;
+}
+
+.chat-body-message.dark {
+    margin-right: 25%;
+    text-align: left;
+    color: var(--chat-message-dark-text-color);
+    border: 1px solid var(--chat-message-dark-border-color);
+    background-color: var(--chat-message-dark-background-color);
+}
+
+.chat-body-message.light {
+    text-align: right;
+    margin-left: 25%;
+    color: var(--chat-message-light-text-color);
+    border: 1px solid var(--chat-message-light-border-color);
+    background-color: var(--chat-message-light-background-color);
+}
+
+.chat-body-message.arrow-top:after {
+    content: " ";
+    position: absolute;
+    left: 17px;
+    top: -12px;
+    border-top: none;
+    border-right: 17px solid transparent;
+    border-left: 0px solid transparent;
+    border-bottom: 19px solid var(--chat-message-dark-background-color);
+}
+
+.chat-body-message.arrow-bottom:after {
+    content: " ";
+    position: absolute;
+    right: 7px;
+    bottom: -14px;
+    border-top: 15px solid var(--chat-message-light-background-color);;
+    border-right: 6px solid transparent;
+    border-left: 11px solid transparent;
+    border-bottom: none;
+}
+
+/*** Chat BODY - WRITE MESSAGE TEXTAREA ***/
+.chat-body-write-text {
+    height: 90px;
+    display: flex;
+    background-color: var(--chat-message-write-text-background-color);
+}
+
+.chat-body-write-text-area {
+    width: 85%;
+    height: 100%;
+}
+
+.chat-body-write-text-area textarea {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    padding: 10px;
+    font-size: 13px;    
+    border:0;
+    font-family: inherit;
+    background-color: transparent;
+}
+
+.chat-body-write-text-buttons {
+    display: flex;
+    padding-top:20px
+}
+
+ 
