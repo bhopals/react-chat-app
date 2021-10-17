@@ -1,10 +1,6 @@
-
-const CONSTANTS = {
+module.exports = {
     CLICK: 'click',
     EMPTY: '',
     ENTER: 'Enter',
     SELECTED: 'selected'
 }
-
-
-module.exports = {...CONSTANTS}
