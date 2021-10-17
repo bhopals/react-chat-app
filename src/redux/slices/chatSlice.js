@@ -18,18 +18,18 @@ const chatSlice = createSlice({
 		}
 	},
 	addConversation (state, action) {
-		console.log('addConversations>action>', action)
-		const { payload } = action
+		let selectedUser;
+		const { id, message } = action.payload
 		const users = state.users.map(user => {
-			if(user.id === payload.user.id) {
-				user = { ...payload.user, messages: payload.messages };
-				console.log('UPDATE USER>', user)
+			if(user.id === id) {
+				user = { ...user, messages: [...user.messages, { text: message, isReceived: false }] };
+				selectedUser = user
 			}
 			return user;
 		})
-		console.log('addConversations>selectedUser>', users)
 		return {
 			...state, 
+			selectedUser,
 			users: [...users]
 		}
 	}

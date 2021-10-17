@@ -12,19 +12,18 @@ import './ChatBody.css'
 const ChatBody = () => {
   
   const dispatch = useDispatch();
-  const user = useSelector(state => state.chat.selectedUser);
-  const [messages, setMessage] = useState([...user.messages])
+  const { selectedUser } = useSelector(state => state.chat);
+  const { messages } = selectedUser
 
-  const onMessageSendHandler = (message) => {
-    setMessage([...messages, { text: message, isReceived: false }]);
-    dispatch(addConversation({ messages, user}))
+  const handleOnDispatch= (message) => {
+    dispatch(addConversation({ id: selectedUser.id, message}))
   }
   
   return (
     <div className='chat-body'>
-      <ChatBodyHeader user={user} />
+      <ChatBodyHeader user={selectedUser} />
       <ChatBodyText messages={messages} />
-      <ChatBodyWriteText onMessageSend={onMessageSendHandler} />
+      <ChatBodyWriteText onDispatchHandler={handleOnDispatch} />
     </div>
   )
 }

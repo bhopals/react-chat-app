@@ -1,19 +1,25 @@
 import React, { useState }  from 'react'
 import PropTypes from 'prop-types'
-import { EMPTY, ENTER } from '../../constants';
+import { CLICK, EMPTY, ENTER } from '../../constants';
 
-const ChatBodyWriteText = ({ onMessageSend }) => {
-  console.log('ChatBodyWriteText>START>')
-
+const ChatBodyWriteText = ({ onDispatchHandler }) => {
 
   const [searchText, setSearchText] = useState(EMPTY)
   
+  const isValidTextToSend = (text, key) => text && text.trim().length !== 0 && (key === ENTER || key == CLICK)
+
   const onKeyDownHandler = (e) => {
-    if (e.key === ENTER) {
-      console.log('ChatBodyWriteText>searchText>', searchText)
-      onMessageSend(searchText)
+    if (isValidTextToSend(searchText, e.key)) {
+      onDispatchHandler(searchText.trim())
       setSearchText(EMPTY)
       e.preventDefault()
+    } 
+  }
+
+  const onMessageSendHandler = () => {
+    if (isValidTextToSend(searchText, CLICK)) {
+      onDispatchHandler(searchText.trim())
+      setSearchText(EMPTY)
     } 
   }
 
@@ -23,16 +29,17 @@ const ChatBodyWriteText = ({ onMessageSend }) => {
           <textarea value={searchText} placeholder='Write a message...' onChange={(e) => setSearchText(e.target.value)} onKeyDown={onKeyDownHandler} />
         </div>
         <div className='chat-body-write-text-buttons'>
-            <div className='body-icon microphone' />
-            <div className='body-icon write-message' />
+            <div className='body-icon microphone' onClick={() => alert('Sending an audio to participants is not Supported!!')} />
+            <div className='body-icon write-message' onClick={onMessageSendHandler} />
         </div>
     </div>
   )
 }
 
 ChatBodyWriteText.propTypes = {
-  onMessageSend: PropTypes.func.isRequired
+  onDispatchHandler: PropTypes.func.isRequired
 }
 
 export default ChatBodyWriteText;
+
 
