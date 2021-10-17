@@ -31,13 +31,20 @@
 }
 
 .card-item .profile .name {
-    color: var(--card-item-profile-title-color);
     font-size: 17px;
     font-weight: 700;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.card-item .profile .name.one {
+    color: var(--card-item-profile-title-color-one);
+}
+.card-item .profile .name.two {
+    color: var(--card-item-profile-title-color-two);
+}
+
 
 .card-item .profile .preview {
     color: var(--card-item-profile-text-preview-color);

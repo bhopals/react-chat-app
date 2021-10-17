@@ -12,6 +12,7 @@ const USER_COUNT = 7
 */
 const getLoggedInUser = () => {
   return {
+    order: 0,
     email: 'bhopalsinghsis@gmail.com',
     id: uuidv4(),
     lastSeen: 'Oct 10, 2021 03:24:00',
@@ -29,8 +30,9 @@ const getLoggedInUser = () => {
 */
 const getUsers = (count = USER_COUNT) => {  
   const length = users.length
+  let i = 0
   while(length === 0 && --count >=0 )
-    users.push(generateUser())
+    users.push(generateUser(++i))
   return users
 }
 
@@ -38,7 +40,7 @@ const getUsers = (count = USER_COUNT) => {
 * To Generate User Date - Fake data generator library - [https://github.com/marak/Faker.js/]
 * @returns an @User Object
 */
-const generateUser = () => {
+const generateUser = (order) => {
     const createdAt = 'May 17, 2021 03:24:00'
     const name = faker.name.findName();
     return {
@@ -50,6 +52,7 @@ const generateUser = () => {
         lastSeen: 'Oct 15, 2021 03:24:00',
         messages: getMessages(USER_COUNT),
         name: faker.name.findName(),
+        order,
         profilePhoto: faker.internet.avatar(),
         username: faker.internet.userName(name),
         website: faker.internet.url()

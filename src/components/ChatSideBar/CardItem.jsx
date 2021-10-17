@@ -15,7 +15,7 @@ const CardItem = ({ user, onClickHandler }) => {
             <img src={user.profilePhoto} alt={`${user.name} Avatar`}/> 
         </div>
         <div className='profile'>
-            <div className='name'>{user.name}</div>
+            <div className={`name ${user.order > 2 ? 'two' : 'one'}`}>{user.name}</div>
             <div className='preview'>{ messages.length > 0 ? messages[messages.length - 1].text : EMPTY }</div>
         </div>
     </div>
