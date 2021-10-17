@@ -1,0 +1,84 @@
+
+* {
+    box-sizing: border-box; 
+}
+
+:root {
+  --close-circle-color: #f56058;
+  --minimize-circle-color: #f9bc2e;
+  --maximize-circle-color: #3dc840;
+  --user-name-color: #c6c3c7;
+  --background-color: #000000;
+  --app-background-color: #ffffff;
+  --app-main-border-color:  #e8e8e8;
+  --app-inside-border-color:  #f5f5f5;
+
+  --card-item-selected-color: #fafafa;
+
+  --app-font-family: 'Open Sans', sans-serif;
+
+  --app-max-width: 1280px;
+  --app-min-width: 550px;
+
+  }
+  
+
+html, body {
+    margin: 0;
+    height: 100%;
+    background-color: var(--background-color);
+    font-family: var(--app-font-family);
+}
+
+/*** CHAT APP - Main Container **/
+.chat-app-container {
+    width:100%;
+    max-width: var(--app-max-width);
+    min-width: var(--app-min-width);
+    margin: 2px auto;
+    border: 2px solid var(--app-main-border-color);
+    background-color: var(--app-background-color);
+}
+
+.header-container {
+    height: 70px;
+    min-height: 70px;
+    max-height: 70px;
+    border-bottom: 1px solid var(--app-inside-border-color)
+}
+
+.body-container {
+    display: flex;
+    height:100%;
+    align-items: stretch;
+    flex-direction: row;
+}
+
+.right-panel {
+    flex: 2;
+    align-items: stretch;
+}
+
+.panel {
+    min-width: 200px;
+}
+
+
+/*** CHAT APP Media Query ***/
+@media screen and (max-width: 600px) {
+    .chat-body-actions {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 850px) {}
+
+@media all and (max-width: 800px) {}    
+
+
+
+
+
+
+  
+  
