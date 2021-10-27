@@ -13,10 +13,18 @@
     overflow: hidden;
     cursor: pointer;
     padding: 10px 5px 5px 40px;
+    transition: all .25s ease;
+    transition-property: box-shadow, transform, border-color;
 }
 
 .card-item.selected {
     background-color: var(--card-item-selected-color);
+}
+
+.card-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0px 7px 0px var(--user-name-color);
+    border-color: var(--user-name-color);
 }
 
 .card-item .avatar img {
