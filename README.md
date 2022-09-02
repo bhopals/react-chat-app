@@ -1,5 +1,5 @@
 # React Chat APP 
-An React Chat App Dummy UI Design
+An React Chat App UI Design
 
 ### Running a local version of the app
 
