@@ -3,7 +3,7 @@ An React Chat App UI Design
 
 ### Running a local version of the app
 
-- Launch the app
+- To Launch the app
 	- > `npm start`
 		
 ## Applications Stack configurations and informations
