@@ -1,10 +1,21 @@
-import { faker } from "@faker-js/faker";
+import faker from "faker";
 
 import { v4 as uuidv4 } from "uuid";
 import getMessages from "./MessageService";
 
 const users = [];
 const USER_COUNT = 7;
+
+// Local avatar paths to avoid external CDN dependency
+const avatarPaths = [
+  process.env.PUBLIC_URL + "/assets/icons/avatar1.svg",
+  process.env.PUBLIC_URL + "/assets/icons/avatar2.svg",
+  process.env.PUBLIC_URL + "/assets/icons/avatar3.svg",
+  process.env.PUBLIC_URL + "/assets/icons/avatar4.svg",
+  process.env.PUBLIC_URL + "/assets/icons/avatar5.svg",
+  process.env.PUBLIC_URL + "/assets/icons/avatar6.svg",
+  process.env.PUBLIC_URL + "/assets/icons/avatar7.svg"
+];
 
 /**
  * The Current LoggedIn User Details
@@ -18,8 +29,7 @@ const getLoggedInUser = () => {
     lastSeen: "Oct 10, 2021 03:24:00",
     messages: getMessages(USER_COUNT),
     name: "Bhopal Singh",
-    profilePhoto:
-      "https://avatars.githubusercontent.com/u/17331876?s=400&u=09765a4e69d46ba6b92c81673b3a4e06be110bc6&v=4",
+    profilePhoto: avatarPaths[0],
     username: "bsingh",
   };
 };
@@ -53,7 +63,7 @@ const generateUser = (order) => {
     messages: getMessages(USER_COUNT),
     name: faker.name.findName(),
     order,
-    profilePhoto: faker.internet.avatar(),
+    profilePhoto: avatarPaths[order % avatarPaths.length],
     username: faker.internet.userName(name),
     website: faker.internet.url(),
   };
